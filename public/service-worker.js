@@ -1,5 +1,5 @@
 const CACHE_NAME = 'vue-app-cache-v1'
-const urlsToCache = ['/', '/index.html', '/manifest.json', '/pwa-192x192.png', '/pwa-512x512.png']
+const urlsToCache = ['/', '/index.html', '/manifest.json']
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
