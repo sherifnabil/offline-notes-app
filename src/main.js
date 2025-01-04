@@ -25,4 +25,18 @@ app.use(createPinia())
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(
+      (registration) => {
+        console.log('ServiceWorker registered: ', registration)
+      },
+      (err) => {
+        console.log('ServiceWorker registration failed: ', err)
+      },
+    )
+  })
+}
+
+
 app.mount('#app')
